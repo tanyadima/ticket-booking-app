@@ -1,0 +1,411 @@
+openapi: 3.0.1
+title: Movie Ticket Booking System
+version: 1.0.0
+servers:
+  - url: http://localhost:8081
+    description: Local server
+paths:
+  /register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                role:
+                  type: string
+                  enum: [ADMIN, CUSTOMER]
+              required: [name, email, password, role]
+      responses:
+        200:
+          description: User registered successfully
+        400:
+          description: Bad request
+  /movie:
+    get:
+      summary: Fetch all movies
+      responses:
+        200:
+          description: List of movies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Movie'
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+    post:
+      summary: Add a new movie
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movie'
+      responses:
+        201:
+          description: Movie added successfully
+        400:
+          description: Bad request
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+  /movie/title/{title}:
+    get:
+      summary: Fetch movie details by title
+      parameters:
+        - in: path
+          name: title
+          required: true
+          schema:
+            type: string
+          description: Movie title
+      responses:
+        200:
+          description: Movie details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Movie'
+        404:
+          description: Movie not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN 
+        400:
+          description: Bad request  
+  /movie/{id}:   
+    put:
+      summary: Update movie details
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: Movie ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Movie'
+      responses:
+        200:
+          description: Movie updated successfully
+        404:
+          description: Movie not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+        400:
+          description: Bad request  
+    delete:
+      summary: Delete a movie
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: Movie ID
+      responses:
+        200:
+          description: Movie deleted successfully
+        404:
+          description: Movie not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+  /movie/search:   
+    get:
+      summary: Fetch movie details by genre or releaseYear
+      parameters:
+        - in: query
+          name: genre
+          required: true
+          schema:
+            type: string
+          description: movie genre
+        - in: query
+          name: releaseYear
+          required: true
+          schema:
+            type: integer
+          description: movie release year  
+      responses:
+        200:
+          description: List of movies by genre or releaseYear
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Movie'
+        404:
+          description: Movie not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+        400:
+          description: Bad request  
+  /showtime:
+    post:
+      summary: Add a new showtime
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Showtime'
+      responses:
+        201:
+          description: Showtime added successfully
+        400:
+          description: Bad request
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+    get:
+      summary: Fetch all showtimes
+      responses:
+        200:
+          description: List of showtimes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Showtime'
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN  
+  /showtime/{id}:
+    put:
+      summary: Update showtime details
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: Showtime ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Showtime'
+      responses:
+        200:
+          description: Showtime updated successfully
+        404:
+          description: Showtime not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+        400:
+          description: Bad request  
+    delete:
+      summary: Delete a showtime
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: Showtime ID
+      responses:
+        200:
+          description: Showtime deleted successfully
+        404:
+          description: Showtime not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN 
+  /showtime/movie:
+    get:
+      summary: Fetch showtime by movie title
+      parameters:
+        - in: query
+          name: movieTitle
+          required: true
+          schema:
+            type: string
+          description: movie title
+      responses:
+        200:
+          description: List of showtimes by movie title
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Showtime'
+        404:
+          description: Showtime not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+        400:
+          description: Bad request  
+  /showtime/theater:
+    get:
+      summary: Fetch showtime by theater
+      parameters:
+        - in: query
+          name: theater
+          required: true
+          schema:
+            type: string
+          description: theater
+      responses:
+        200:
+          description: List of showtimes by theater
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Showtime'
+        404:
+          description: Showtime not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN 
+        400:
+          description: Bad request  
+  /book/tickets:
+    post:
+      summary: Book a ticket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Booking'
+      responses:
+        201:
+          description: Ticket booked successfully
+        400:
+          description: Bad request
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role CUSTOMER       
+    get:
+      summary: Fetch all bookings
+      responses:
+        200:
+          description: List of bookings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Booking'
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN
+        400:
+          description: Bad request  
+  /book/user/{userName}:
+    get:
+      summary: Fetch booking for specific user
+      parameters:
+        - in: path
+          name: userName
+          required: true
+          schema:
+            type: string
+          description: user name
+      responses:
+        200:
+          description: List of booking by user name
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Booking'
+        404:
+          description: Showtime not found
+        403:
+          description: Forbidden, the session is invalid or expired
+        401:
+          description: Unauthorized, can access only user with role ADMIN 
+        400:
+          description: Bad request  
+components:
+  schemas:
+    Movie:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        genre:
+          type: string
+        duration:
+          type: integer
+        rating:
+          type: number
+          format: double
+        releaseYear:
+          type: integer
+    Showtime:
+      type: object
+      properties:
+        id:
+          type: integer
+        movie:
+          type: string
+        theater:
+          type: string
+        startTime:
+          type: string
+          format: date-time
+        endTime:
+          type: string
+          format: date-time
+    Booking:
+      type: object
+      properties:
+        id:
+          type: integer
+        userName:
+          type: string
+        movieTitle:
+          type: string
+        showtimeId:
+          type: integer
+        seatNumber:
+          type: integer
+        price:
+          type: number
+          format: double
