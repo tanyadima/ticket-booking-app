@@ -2,7 +2,7 @@ package com.booking_app.booking_app.controller;
 
 import com.booking_app.booking_app.exceptions.BookingNotFoundException;
 import com.booking_app.booking_app.model.Booking;
-import com.booking_app.booking_app.requests.BookingRequest;
+import com.booking_app.booking_app.dto.BookingRequest;
 import com.booking_app.booking_app.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
