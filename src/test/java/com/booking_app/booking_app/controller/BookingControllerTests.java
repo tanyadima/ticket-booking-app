@@ -4,7 +4,9 @@ import com.booking_app.booking_app.model.Booking;
 import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.model.Showtime;
 import com.booking_app.booking_app.model.User;
+import com.booking_app.booking_app.security.JwtUtil;
 import com.booking_app.booking_app.service.BookingService;
+import com.booking_app.booking_app.service.CustomUserDetailsService;
 import com.booking_app.booking_app.service.MovieService;
 import com.booking_app.booking_app.service.ShowtimeService;
 import org.junit.jupiter.api.Test;
@@ -43,6 +45,12 @@ public class BookingControllerTests {
 
     @MockBean
     private BookingService bookingService;
+
+    @MockBean
+    private JwtUtil jwtUtil;
+
+    @MockBean
+    private CustomUserDetailsService customUserDetailsService;
 
     private Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
     private Showtime getShowtime1(){

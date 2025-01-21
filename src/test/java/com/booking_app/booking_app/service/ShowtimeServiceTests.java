@@ -4,7 +4,7 @@ import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.model.Showtime;
 import com.booking_app.booking_app.repository.MovieRepository;
 import com.booking_app.booking_app.repository.ShowtimeRepository;
-import com.booking_app.booking_app.requests.ShowtimeRequest;
+import com.booking_app.booking_app.dto.ShowtimeRequest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

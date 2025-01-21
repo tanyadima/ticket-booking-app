@@ -5,6 +5,28 @@ servers:
   - url: http://localhost:8081
     description: Local server
 paths:
+  /login:
+    post:
+      summary: Login to the system
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+              required: [username, password]
+      responses:
+        200:
+          description: Login successful
+        401:
+          description: Invalid Credentials
+        500:
+          description: Unknown/ Internal Server error
   /register:
     post:
       summary: Register a new user
@@ -30,6 +52,8 @@ paths:
           description: User registered successfully
         400:
           description: Bad request
+        500:
+          description: Unknown/ Internal Server error
   /movie:
     get:
       summary: Fetch all movies
@@ -43,9 +67,11 @@ paths:
                 items:
                   $ref: '#/components/schemas/Movie'
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
+        500:
+          description: Unknown/ Internal Server error
     post:
       summary: Add a new movie
       requestBody:
@@ -60,9 +86,11 @@ paths:
         400:
           description: Bad request
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
+        500:
+          description: Unknown/ Internal Server error
   /movie/title/{title}:
     get:
       summary: Fetch movie details by title
@@ -83,12 +111,14 @@ paths:
         404:
           description: Movie not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN 
+          description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
-  /movie/{id}:   
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
+  /movie/{id}:
     put:
       summary: Update movie details
       parameters:
@@ -110,11 +140,13 @@ paths:
         404:
           description: Movie not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
     delete:
       summary: Delete a movie
       parameters:
@@ -130,10 +162,12 @@ paths:
         404:
           description: Movie not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
-  /movie/search:   
+        500:
+          description: Unknown/ Internal Server error
+  /movie/search:
     get:
       summary: Fetch movie details by genre or releaseYear
       parameters:
@@ -148,7 +182,7 @@ paths:
           required: true
           schema:
             type: integer
-          description: movie release year  
+          description: movie release year
       responses:
         200:
           description: List of movies by genre or releaseYear
@@ -161,11 +195,13 @@ paths:
         404:
           description: Movie not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
   /showtime:
     post:
       summary: Add a new showtime
@@ -181,9 +217,11 @@ paths:
         400:
           description: Bad request
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
+        500:
+          description: Unknown/ Internal Server error
     get:
       summary: Fetch all showtimes
       responses:
@@ -196,9 +234,11 @@ paths:
                 items:
                   $ref: '#/components/schemas/Showtime'
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN  
+          description: Unauthorized, can access only user with role ADMIN
+        500:
+          description: Unknown/ Internal Server error
   /showtime/{id}:
     put:
       summary: Update showtime details
@@ -221,11 +261,13 @@ paths:
         404:
           description: Showtime not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
     delete:
       summary: Delete a showtime
       parameters:
@@ -241,9 +283,11 @@ paths:
         404:
           description: Showtime not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN 
+          description: Unauthorized, can access only user with role ADMIN
+        500:
+          description: Unknown/ Internal Server error
   /showtime/movie:
     get:
       summary: Fetch showtime by movie title
@@ -266,11 +310,13 @@ paths:
         404:
           description: Showtime not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
   /showtime/theater:
     get:
       summary: Fetch showtime by theater
@@ -293,11 +339,13 @@ paths:
         404:
           description: Showtime not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN 
+          description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
   /book/tickets:
     post:
       summary: Book a ticket
@@ -313,9 +361,11 @@ paths:
         400:
           description: Bad request
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role CUSTOMER       
+          description: Unauthorized, can access only user with role CUSTOMER
+        500:
+          description: Unknown/ Internal Server error
     get:
       summary: Fetch all bookings
       responses:
@@ -328,11 +378,13 @@ paths:
                 items:
                   $ref: '#/components/schemas/Booking'
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
           description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
   /book/user/{userName}:
     get:
       summary: Fetch booking for specific user
@@ -355,11 +407,13 @@ paths:
         404:
           description: Showtime not found
         403:
-          description: Forbidden, the session is invalid or expired
+          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN 
+          description: Unauthorized, can access only user with role ADMIN
         400:
-          description: Bad request  
+          description: Bad request
+        500:
+          description: Unknown/ Internal Server error
 components:
   schemas:
     Movie:

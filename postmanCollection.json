@@ -26,7 +26,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"dima\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
+							"raw": "{\n    \"name\": \"test\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8081/register",
@@ -61,8 +61,8 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=04B535F9471E8D13E95E218C6C5E4F20",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYzMTE2LCJleHAiOjE3Mzc1NDk1MTZ9.fgQjavhiOXWcxN6kmS2g8PrxAg97m0Fl6zbVXDx99ew",
 								"type": "text"
 							}
 						],
@@ -98,15 +98,11 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=1576978B53DC59613036CDBCE5789445",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYzMTE2LCJleHAiOjE3Mzc1NDk1MTZ9.fgQjavhiOXWcxN6kmS2g8PrxAg97m0Fl6zbVXDx99ew",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"dima\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
-						},
 						"url": {
 							"raw": "http://localhost:8081/movie",
 							"protocol": "http",
@@ -135,17 +131,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=04B535F9471E8D13E95E218C6C5E4F20",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\": \"film\",\n    \"genre\": \"drama\",\n    \"rating\": 5.3,\n    \"releaseYear\": 2021,\n    \"duration\": 90\n}"
-						},
 						"url": {
-							"raw": "http://localhost:8081/movie/title/film 3",
+							"raw": "http://localhost:8081/movie/title/film",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -154,7 +146,7 @@
 							"path": [
 								"movie",
 								"title",
-								"film 3"
+								"film"
 							]
 						}
 					},
@@ -174,17 +166,17 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=2D4E45AF78A590E0B124AA265C176416",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYzMTE2LCJleHAiOjE3Mzc1NDk1MTZ9.fgQjavhiOXWcxN6kmS2g8PrxAg97m0Fl6zbVXDx99ew",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"film\",\n    \"genre\": \"drama\",\n    \"rating\": 8.2,\n    \"releaseYear\": 2000,\n    \"duration\": 90\n}"
+							"raw": "{\n    \"title\": \"film 2\",\n    \"genre\": \"drama\",\n    \"rating\": 5.3,\n    \"releaseYear\": 2021,\n    \"duration\": 100\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8081/movie/1",
+							"raw": "http://localhost:8081/movie/8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -192,7 +184,7 @@
 							"port": "8081",
 							"path": [
 								"movie",
-								"1"
+								"8"
 							]
 						}
 					},
@@ -212,17 +204,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=2D4E45AF78A590E0B124AA265C176416",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYzMTE2LCJleHAiOjE3Mzc1NDk1MTZ9.fgQjavhiOXWcxN6kmS2g8PrxAg97m0Fl6zbVXDx99ew",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\": \"film\",\n    \"genre\": \"drama\",\n    \"rating\": 8.2,\n    \"releaseYear\": 2000,\n    \"duration\": 90\n}"
-						},
 						"url": {
-							"raw": "http://localhost:8081/movie/1",
+							"raw": "http://localhost:8081/movie/8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -230,7 +218,7 @@
 							"port": "8081",
 							"path": [
 								"movie",
-								"1"
+								"8"
 							]
 						}
 					},
@@ -250,15 +238,11 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=B5AFA8BA30C4F0A0954FEFFB39A4E81C",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"title\": \"film\",\n    \"genre\": \"drama\",\n    \"rating\": 5.3,\n    \"releaseYear\": 2021,\n    \"duration\": 90\n}"
-						},
 						"url": {
 							"raw": "http://localhost:8081/movie/search?genre=drama",
 							"protocol": "http",
@@ -299,15 +283,11 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=BDBDA121AD1A8D54F4F2A01264F24F53",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"dima\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
-						},
 						"url": {
 							"raw": "http://localhost:8081/showtime",
 							"protocol": "http",
@@ -336,15 +316,11 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=D9666C61AF2E1D2189F15006D06F2F62",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"dima\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
-						},
 						"url": {
 							"raw": "http://localhost:8081/showtime/movie?movieTitle=film",
 							"protocol": "http",
@@ -380,17 +356,13 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=D9666C61AF2E1D2189F15006D06F2F62",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"dima\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
-						},
 						"url": {
-							"raw": "http://localhost:8081/showtime/theater?theater=theater",
+							"raw": "http://localhost:8081/showtime/theater?theater=theater 4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -403,7 +375,7 @@
 							"query": [
 								{
 									"key": "theater",
-									"value": "theater"
+									"value": "theater 4"
 								}
 							]
 						}
@@ -424,14 +396,14 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=587D0695558CB00A1295EFDD60742DD4",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYzMTE2LCJleHAiOjE3Mzc1NDk1MTZ9.fgQjavhiOXWcxN6kmS2g8PrxAg97m0Fl6zbVXDx99ew",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"theater\": \"Theater 2\",\n    \"startTime\": \"2025-01-18T14:00:00\",\n    \"endTime\": \"2025-01-18T16:00:00\",\n    \"movie\": \"film\"\n}"
+							"raw": "{\n    \"theater\": \"Theater 3\",\n    \"startTime\": \"2025-01-18T14:00:00\",\n    \"endTime\": \"2025-01-18T16:00:00\",\n    \"movie\": \"film\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8081/showtime",
@@ -461,17 +433,17 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=587D0695558CB00A1295EFDD60742DD4",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYzMTE2LCJleHAiOjE3Mzc1NDk1MTZ9.fgQjavhiOXWcxN6kmS2g8PrxAg97m0Fl6zbVXDx99ew",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"theater\": \"Theater 2\",\n    \"startTime\": \"2025-01-18T14:00:00\",\n    \"endTime\": \"2025-01-18T16:00:00\",\n    \"movie\": \"film\"\n}"
+							"raw": "{\n        \"startTime\": \"2025-01-18T14:00:00\",\n        \"endTime\": \"2025-01-18T16:00:00\",\n        \"movie\": \"film\",\n        \"theater\": \"Theater 4\"\n    }"
 						},
 						"url": {
-							"raw": "http://localhost:8081/showtime/1",
+							"raw": "http://localhost:8081/showtime/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -479,7 +451,7 @@
 							"port": "8081",
 							"path": [
 								"showtime",
-								"1"
+								"3"
 							]
 						}
 					},
@@ -499,17 +471,17 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=BDBDA121AD1A8D54F4F2A01264F24F53",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYzMTE2LCJleHAiOjE3Mzc1NDk1MTZ9.fgQjavhiOXWcxN6kmS2g8PrxAg97m0Fl6zbVXDx99ew",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"film\",\n    \"genre\": \"drama\",\n    \"rating\": 8.2,\n    \"releaseYear\": 2000,\n    \"duration\": 90\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:8081/showtime/1",
+							"raw": "http://localhost:8081/showtime/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -517,7 +489,7 @@
 							"port": "8081",
 							"path": [
 								"showtime",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -542,15 +514,11 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=1576978B53DC59613036CDBCE5789445",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"dima\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
-						},
 						"url": {
 							"raw": "http://localhost:8081/book",
 							"protocol": "http",
@@ -579,15 +547,11 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=AB810BA619B93762EC6ECE2ED9952882",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"dima\",\n    \"password\": \"dima123\",\n    \"email\": \"test@gmail.com\",\n    \"role\": \"ADMIN\"\n}"
-						},
 						"url": {
 							"raw": "http://localhost:8081/book/user/customer",
 							"protocol": "http",
@@ -618,14 +582,14 @@
 								"value": "application/json"
 							},
 							{
-								"key": "Cookie",
-								"value": "JSESSIONID=5A7BA0A14B6B336CB88D2A92E318BECC",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJST0xFX0FETUlOIiwiaWF0IjoxNzM3NDYxMDI2LCJleHAiOjE3Mzc1NDc0MjZ9.9w40XEDtr5WQ9W9my6CJEYKAFMNJAW0D155cNXitiOc",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userName\": \"customer\",\n    \"showtimeId\": 3,\n    \"movieTitle\": \"film\",\n    \"seatNumber\": 129,\n    \"price\": 80.50\n}"
+							"raw": "{\n    \"userName\": \"customer\",\n    \"showtimeId\": 3,\n    \"movieTitle\": \"film\",\n    \"seatNumber\": 102,\n    \"price\": 80.50\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8081/book/ticket",
@@ -637,6 +601,43 @@
 							"path": [
 								"book",
 								"ticket"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain, application/json, application/*+json, */*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"login"
 							]
 						}
 					},

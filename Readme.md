@@ -36,7 +36,7 @@ and authorization mechanisms.
 ## Technologies Used
 * Backend: Java, Spring Boot
 * Database: MySQL
-* Security: Spring Security (Role-based Authorization)
+* Security: Spring Security (Role-based Authorization) using JWT
 * Build Tool: Maven
 
 ## Setup Instructions
@@ -47,7 +47,7 @@ and authorization mechanisms.
 * Maven
 
 ### 2. Clone the Repository
-git clone https://github.com/your-repository/movie-ticket-booking
+git clone https://github.com/tanyadima/ticket-booking-app.git
 cd movie-ticket-booking
 
 ### 3. Configure MySQL
@@ -70,18 +70,26 @@ spring.jpa.hibernate.ddl-auto=update
   Update port if needed in application.properties
   server.port=8081
 * First, register users using Postman collection (register)
-* Login to the user using your browser and URL http://localhost:8081/login
-* After sussessfull login copy cookie value displayed in the monitor
-* For every request,except register, add header Cookie and paste the value from the previous step 
+* Login using Postman collection (login)
+* After sussessfull login copy token jwt from the response body
+* For every request,except register and login, add Authorization header and paste the value from the previous step
+  like this: Bearer {token jwt from the login request}
 * Use postman collection attached to the project: postmanCollection.json
 * Use tools like Postman or cURL to interact with the API (movies, showtimes, ticket bookings)
 
 ## Constraints
-* Authentication: All endpoints except login and register require authentication.
+* Authentication: All endpoints except login and register require authentication 
+  using Authorization header and jwt received from the login request.
 * Authorization: 
   movie, showtime adn fetch book data are restricted to users with the ROLE_ADMIN role.
   book ticket are restricted to users with the ROLE_CUSTOMER role.
 ## API Endpoints
+
+### Login
+* Login: POST /login (For everyone)
+
+### Register
+* Register new user: POST /register (For everyone)
 
 ### Movies
 * Add Movie: POST /movie (Admin Only)
@@ -110,7 +118,7 @@ spring.jpa.hibernate.ddl-auto=update
 200 Susses
 201 Entity created successfully
 401 The user is not authorized to access the resource
-403 The session is invalid or expired
+403 The jwt is invalid or expired
 400 Bad Request
 404 Entity not found
 
@@ -173,6 +181,13 @@ name     varchar(255)               not null,
 password varchar(255)               not null,
 role     enum ('ADMIN', 'CUSTOMER') not null
 );
+
+## Improvement for production
+In production, I would recommend: 
+* separate login functionality, register functionality and main application 
+  functionality: book ticket, showtime, movies into microservices
+* keep secure data in the Vault
+* use external token issuer instead of jwt, like Auth0
 
 ## Contributors
 * Shklovsky Dmitry - [tanyadima@gmail.com]

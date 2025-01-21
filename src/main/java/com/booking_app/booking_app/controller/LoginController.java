@@ -1,42 +1,44 @@
 package com.booking_app.booking_app.controller;
 
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.booking_app.booking_app.dto.JwtResponse;
+import com.booking_app.booking_app.dto.LoginRequest;
+import com.booking_app.booking_app.exceptions.InvalidCredentialsException;
+import com.booking_app.booking_app.security.JwtUtil;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class LoginController {
 
-    @GetMapping("/login")
-    public String loginPage(HttpServletRequest request, Model model) {
-        return "login";  // Return the login.html page
+    private final AuthenticationManager authenticationManager;
+    private final JwtUtil jwtUtil;
+    private String tokenType = "Bearer";
+
+    public LoginController(AuthenticationManager authenticationManager, JwtUtil jwtUtil) {
+        this.authenticationManager = authenticationManager;
+        this.jwtUtil = jwtUtil;
     }
 
-    @GetMapping("/home")
-    public String homePage(HttpServletRequest request, Model model) {
-        Cookie[] cookies = request.getCookies();
-        String cookieValue = "No cookies found";
-
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if ("JSESSIONID".equals(cookie.getName())) {
-                    cookieValue = "JSESSIONID=" + cookie.getValue();
-                    break;
-                }
-            }
+    @PostMapping("/login")
+    public JwtResponse login(@RequestBody LoginRequest authRequest) {
+        try {
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
+                            authRequest.getUsername(),
+                            authRequest.getPassword()
+                    )
+            );
+            var user = (org.springframework.security.core.userdetails.User) authentication.getPrincipal();
+            String role = user.getAuthorities().iterator().next().getAuthority();
+            String token = jwtUtil.generateToken(authRequest.getUsername(), role);
+            return new JwtResponse(token, tokenType);
+        } catch (AuthenticationException e) {
+            throw new InvalidCredentialsException("Invalid credentials");
         }
-
-        model.addAttribute("cookieValue", cookieValue);
-        return "home";  // Redirect to a home page after successful login
-    }
-
-    @PostMapping("/perform_login")
-    public String performLogin(@RequestParam String username, @RequestParam String password) {
-        // You can handle custom login logic here, but Spring Security does this automatically
-        return "redirect:/home";  // Redirect after successful login
     }
 }

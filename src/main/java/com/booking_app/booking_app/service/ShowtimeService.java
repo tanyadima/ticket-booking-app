@@ -5,7 +5,7 @@ import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.model.Showtime;
 import com.booking_app.booking_app.repository.MovieRepository;
 import com.booking_app.booking_app.repository.ShowtimeRepository;
-import com.booking_app.booking_app.requests.ShowtimeRequest;
+import com.booking_app.booking_app.dto.ShowtimeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;

@@ -2,7 +2,7 @@ package com.booking_app.booking_app.controller;
 
 import com.booking_app.booking_app.exceptions.ShowtimeNotFoundException;
 import com.booking_app.booking_app.model.Showtime;
-import com.booking_app.booking_app.requests.ShowtimeRequest;
+import com.booking_app.booking_app.dto.ShowtimeRequest;
 import com.booking_app.booking_app.service.ShowtimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

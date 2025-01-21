@@ -3,7 +3,6 @@ package com.booking_app.booking_app.service;
 import com.booking_app.booking_app.model.User;
 import com.booking_app.booking_app.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -20,10 +19,10 @@ public class CustomUserDetailsService implements UserDetailsService {
         User user = userRepository.findByName(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
 
-        return new org.springframework.security.core.userdetails.User(
-                user.getName(),
-                user.getPassword(),
-                AuthorityUtils.createAuthorityList("ROLE_" + user.getRole().toString())
-        );
+        return org.springframework.security.core.userdetails.User
+                .withUsername(user.getName())
+                .password(user.getPassword())
+                .roles(user.getRole().toString())
+                .build();
     }
 }
