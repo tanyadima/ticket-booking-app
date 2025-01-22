@@ -32,13 +32,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ErrorResponse> handleBadRequestException(Exception ex) {
-        ErrorResponse errorResponse = new ErrorResponse("The provided data is invalid", HttpStatus.BAD_REQUEST.value());
+        ErrorResponse errorResponse = new ErrorResponse(String.format("The provided data is invalid: %s", ex.getMessage()), HttpStatus.BAD_REQUEST.value());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorResponse> handleIllegalArgumentException(Exception ex) {
-        ErrorResponse errorResponse = new ErrorResponse("The provided data is illegal", HttpStatus.BAD_REQUEST.value());
+        ErrorResponse errorResponse = new ErrorResponse(String.format("The provided data is illegal: %s", ex.getMessage()), HttpStatus.BAD_REQUEST.value());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 

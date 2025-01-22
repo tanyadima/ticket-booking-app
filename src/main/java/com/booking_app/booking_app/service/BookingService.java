@@ -40,6 +40,9 @@ public class BookingService {
                 .orElseThrow(() -> new DataIntegrityViolationException("Showtime not found"));
         Movie movie = movieRepository.findByTitle(title)
                 .orElseThrow(() -> new DataIntegrityViolationException("Movie not found"));
+        if (!showtime.getMovie().getTitle().equals(title)) {
+            throw new DataIntegrityViolationException("Showtime movie title does not match the provided movie title");
+        }
 
         // Check if the seat is already booked
         if (bookingRepository.existsByShowtimeAndSeatNumber(showtime, seatNumber)) {
