@@ -48,7 +48,7 @@ paths:
                   enum: [ADMIN, CUSTOMER]
               required: [name, email, password, role]
       responses:
-        200:
+        201:
           description: User registered successfully
         400:
           description: Bad request
