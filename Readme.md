@@ -224,6 +224,7 @@ In production, I would recommend:
 * keep secure data in the Vault
 * use external token issuer instead of jwt, like Auth0
 * keep data in configuration file
+* using error codes for every request instead of error messages
 
 ## Contributors
 * Shklovsky Dmitry - [tanyadima@gmail.com]
