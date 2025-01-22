@@ -1,6 +1,7 @@
 package com.booking_app.booking_app.service;
 
 import com.booking_app.booking_app.exceptions.MovieNotFoundException;
+import com.booking_app.booking_app.exceptions.ShowtimeNotFoundException;
 import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,6 +72,10 @@ public class MovieService {
     }
 
     public void deleteMovieById(Long id) {
+        boolean exists = movieRepository.existsById(id);
+        if (!exists) {
+            throw new MovieNotFoundException("Movie not found");
+        }
         movieRepository.deleteById(id);
     }
 
