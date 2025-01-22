@@ -38,6 +38,9 @@ and authorization mechanisms.
 * Database: MySQL
 * Security: Spring Security (Role-based Authorization) using JWT
 * Build Tool: Maven
+* JWT (JSON Web Token)
+* JUnit & Mockito
+* OpenAPI
 
 ## Setup Instructions
 
@@ -51,13 +54,14 @@ git clone https://github.com/tanyadima/ticket-booking-app.git
 cd movie-ticket-booking
 
 ### 3. Configure MySQL
-Create a database named booking-app-db
-you can use attached docker-compose.yml file
-Update the application.properties file with your MySQL credentials:
-spring.datasource.url=jdbc:mysql://localhost:3306/movie_booking
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
+* Update the application.properties file with your MySQL credentials:
+  spring.datasource.url=jdbc:mysql://localhost:3306/movie_booking
+  spring.datasource.username=your_username
+  spring.datasource.password=your_password
+  spring.jpa.hibernate.ddl-auto=update
+* Create a database named booking-app-db
+  you can use attached docker-compose.yml file from deployment directory
+* Run scripts to create tables: booking, movie, showtime, user from src/main/resources/db
 
 ### 4. Build and Run the Application
 * Build the application:
@@ -76,6 +80,32 @@ spring.jpa.hibernate.ddl-auto=update
   like this: Bearer {token jwt from the login request}
 * Use postman collection attached to the project: postmanCollection.json
 * Use tools like Postman or cURL to interact with the API (movies, showtimes, ticket bookings)
+
+### 6. Use application.properties file containing local configuration in the path src/main/resources
+spring.application.name=booking-app
+spring.datasource.url=jdbc:mysql://localhost:3306/booking-app-db
+spring.datasource.username=root
+spring.datasource.password=password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+server.port=8081
+logging.level.org.springframework.security=DEBUG
+showtime.max-seats=10
+jwt.privateKey=<your private key as one line string>
+jwt.publicKey=<your public key as one line string>
+jwt.expirationMs=3600000
+
+it is possible to use public and private keys from the application.properties file provided in the project 
+to run application,
+but it is possible to generate keys yourself and add them to application.properties file
+to do it, use the following commands:
+* use openssl commands to generate private and public key
+  openssl genrsa -out private_key.pem 2048
+  openssl rsa -in private_key.pem -pubout -out public_key.pem
+* use command 
+  awk 'NF {sub(/\\n/, ""); printf "%s\\n",$0;}' public.pem
+  to change the key to one line string and add it to properties file
 
 ## Constraints
 * Authentication: All endpoints except login and register require authentication 
@@ -117,10 +147,11 @@ spring.jpa.hibernate.ddl-auto=update
 ## API Responses
 200 Susses
 201 Entity created successfully
-401 The user is not authorized to access the resource
-403 The jwt is invalid or expired
+403 The user is not authorized to access the resource
+401 The jwt is invalid or expired, missing or invalid Authorization header
 400 Bad Request
 404 Entity not found
+500 Internal Server Error/ Unknown error
 
 OpenAPI provided in the project openapi.yaml
 
@@ -188,6 +219,7 @@ In production, I would recommend:
   functionality: book ticket, showtime, movies into microservices
 * keep secure data in the Vault
 * use external token issuer instead of jwt, like Auth0
+* keep data in configuration file
 
 ## Contributors
 * Shklovsky Dmitry - [tanyadima@gmail.com]

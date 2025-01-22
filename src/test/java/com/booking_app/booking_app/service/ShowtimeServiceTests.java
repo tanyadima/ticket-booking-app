@@ -1,10 +1,10 @@
 package com.booking_app.booking_app.service;
 
+import com.booking_app.booking_app.dto.ShowtimeRequest;
 import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.model.Showtime;
 import com.booking_app.booking_app.repository.MovieRepository;
 import com.booking_app.booking_app.repository.ShowtimeRepository;
-import com.booking_app.booking_app.dto.ShowtimeRequest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -31,7 +31,7 @@ class ShowtimeServiceTest {
     @InjectMocks
     private ShowtimeService showtimeService;
 
-    private Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
+    private final Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
     private Showtime getShowtime1(){
         Showtime showtime1 = new Showtime();
         showtime1.setId(1L);
@@ -62,7 +62,6 @@ class ShowtimeServiceTest {
 
     @Test
     void testAddShowtime() {
-        Showtime showtime = this.getShowtime2();
         Showtime savedShowtime = this.getShowtime1();
         ShowtimeRequest showtimeRequest = this.getShowtimeRequest();
 
@@ -79,8 +78,6 @@ class ShowtimeServiceTest {
 
     @Test
     void testAddShowtimeThrowsExceptionIfMovieNotFound() {
-        Showtime showtime = this.getShowtime2();
-        Showtime savedShowtime = this.getShowtime1();
         ShowtimeRequest showtimeRequest = this.getShowtimeRequest();
 
         assertThrows(RuntimeException.class, () -> showtimeService.addShowtime(showtimeRequest));
