@@ -63,6 +63,9 @@ public class ShowtimeService {
                 .orElseThrow(() -> new ShowtimeNotFoundException("Showtime not found with ID: " + showtimeId));
         Movie movie = movieRepository.findByTitle(showtimeRequest.getMovie())
                 .orElseThrow(() -> new DataIntegrityViolationException("Movie not found with title: " + showtimeRequest.getMovie()));
+        if (!showtimeRequest.getStartTime().isBefore(showtimeRequest.getEndTime())) {
+            throw new IllegalArgumentException("Start time must be before end time");
+        }
         Showtime updatedShowtime = new Showtime();
         updatedShowtime.setMovie(movie);
         updatedShowtime.setTheater(showtimeRequest.getTheater());
