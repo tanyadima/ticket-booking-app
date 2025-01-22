@@ -19,9 +19,7 @@ public interface ShowtimeRepository extends JpaRepository<Showtime, Long> {
             @Param("startTime") LocalDateTime startTime,
             @Param("endTime") LocalDateTime endTime);
 
-    // Find all showtimes for a specific movie
     List<Showtime> findByMovieId(Long movieId);
 
-    // Find all showtimes for a specific theater
     List<Showtime> findByTheater(String theater);
 }

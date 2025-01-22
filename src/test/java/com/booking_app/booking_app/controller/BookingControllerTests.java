@@ -82,12 +82,14 @@ public class BookingControllerTests {
 
     @Test
     public void testBookTicket() throws Exception {
+        String token = jwtUtil.generateToken("customer", "ROLE_CUSTOMER");
         Booking booking = this.getBooking();
 
         when(bookingService.bookTicket(Mockito.any(String.class),Mockito.any(Long.class),Mockito.any(String.class),Mockito.any(Integer.class),Mockito.any(BigDecimal.class))).thenReturn(booking);
 
         mockMvc.perform(post("/book/ticket")
                         .with(SecurityMockMvcRequestPostProcessors.user("customer").roles("CUSTOMER"))
+                        .header("Authorization", "Bearer " + token)
                         .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
@@ -102,11 +104,12 @@ public class BookingControllerTests {
 
     @Test
     public void testGetTicketsForUser() throws Exception {
-        Booking booking = this.getBooking();
+        String token = jwtUtil.generateToken("admin", "ROLE_ADMIN");
         when(bookingService.getBookingsByUserName("customer1")).thenReturn(Arrays.asList(this.getBooking()));
 
         mockMvc.perform(get("/book/user/customer1")
                 .with(SecurityMockMvcRequestPostProcessors.user("amin").roles("ADMIN"))
+                .header("Authorization", "Bearer " + token)
                 .with(csrf()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
@@ -115,11 +118,12 @@ public class BookingControllerTests {
 
     @Test
     public void testGetTickets() throws Exception {
-        Booking booking = this.getBooking();
+        String token = jwtUtil.generateToken("admin", "ROLE_ADMIN");
         when(bookingService.getAllBookings()).thenReturn(Arrays.asList(this.getBooking()));
 
         mockMvc.perform(get("/book")
                         .with(SecurityMockMvcRequestPostProcessors.user("amin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                         .with(csrf()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
