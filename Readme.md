@@ -45,7 +45,7 @@ and authorization mechanisms.
 ## Setup Instructions
 
 ### 1. Prerequisites
-* Java Development Kit (JDK) 11+
+* Java Development Kit (JDK) 17 or higher (tested with JDK 21)
 * MySQL Database
 * Maven
 
