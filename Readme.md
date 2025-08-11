@@ -96,6 +96,9 @@ jwt.privateKey=<your private key as one line string>
 jwt.publicKey=<your public key as one line string>
 jwt.expirationMs=3600000
 
+JWT expiration currently defined on 60 minutes, 
+but it is configurable in configuration property: jwt.expirationMs
+
 it is possible to use public and private keys from the application.properties file provided in the project 
 to run application,
 but it is possible to generate keys yourself and add them to application.properties file
@@ -113,6 +116,7 @@ to do it, use the following commands:
 * Authorization: 
   movie, showtime adn fetch book data are restricted to users with the ROLE_ADMIN role.
   book ticket are restricted to users with the ROLE_CUSTOMER role.
+
 ## API Endpoints
 
 ### Login
