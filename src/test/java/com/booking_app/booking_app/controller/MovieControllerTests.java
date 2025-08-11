@@ -4,6 +4,7 @@ import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.security.JwtUtil;
 import com.booking_app.booking_app.service.CustomUserDetailsService;
 import com.booking_app.booking_app.service.MovieService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,13 @@ public class MovieControllerTests {
     @MockBean
     private CustomUserDetailsService customUserDetailsService;
 
+    private String token;
+
+    @BeforeEach
+    public void init() {
+        // Generate a new token before each test
+        token = jwtUtil.generateToken("admin", "ROLE_ADMIN");
+    }
 
     @Test
     public void testGetAllMovies() throws Exception {
@@ -48,6 +56,7 @@ public class MovieControllerTests {
 
         mockMvc.perform(get("/movie")
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                        )
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
@@ -63,6 +72,7 @@ public class MovieControllerTests {
 
         mockMvc.perform(post("/movie")
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                         .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
@@ -77,7 +87,6 @@ public class MovieControllerTests {
 
     @Test
     public void updateMovie() throws Exception {
-        Movie existingMovie = new Movie(1L, "Inception", "Sci-Fi", 148, 8.8, 2010);
         Movie updatedMovie = new Movie(1L, "Inception 2", "Sci-Fi", 150, 9.0, 2025);
 
         when(movieService.existsById(1L)).thenReturn(true);
@@ -87,6 +96,7 @@ public class MovieControllerTests {
         mockMvc.perform(put("/movie/{id}", 1L)
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
                         .with(csrf())
+                        .header("Authorization", "Bearer " + token)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"title\":\"Inception 2\", \"genre\":\"Sci-Fi\", \"duration\":150, \"rating\":9.0, \"releaseYear\":2025}"))
                 .andExpect(status().isOk())
@@ -103,6 +113,7 @@ public class MovieControllerTests {
 
         mockMvc.perform(delete("/movie/{id}", 1L)
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                         .with(csrf()))
                 .andExpect(status().isOk());
     }

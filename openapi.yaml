@@ -66,10 +66,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Movie'
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         500:
           description: Unknown/ Internal Server error
     post:
@@ -85,10 +85,10 @@ paths:
           description: Movie added successfully
         400:
           description: Bad request
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         500:
           description: Unknown/ Internal Server error
   /movie/title/{title}:
@@ -110,10 +110,10 @@ paths:
                 $ref: '#/components/schemas/Movie'
         404:
           description: Movie not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
@@ -139,10 +139,10 @@ paths:
           description: Movie updated successfully
         404:
           description: Movie not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
@@ -161,10 +161,10 @@ paths:
           description: Movie deleted successfully
         404:
           description: Movie not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         500:
           description: Unknown/ Internal Server error
   /movie/search:
@@ -194,10 +194,10 @@ paths:
                   $ref: '#/components/schemas/Movie'
         404:
           description: Movie not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
@@ -216,10 +216,10 @@ paths:
           description: Showtime added successfully
         400:
           description: Bad request
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         500:
           description: Unknown/ Internal Server error
     get:
@@ -260,10 +260,10 @@ paths:
           description: Showtime updated successfully
         404:
           description: Showtime not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
@@ -282,10 +282,10 @@ paths:
           description: Showtime deleted successfully
         404:
           description: Showtime not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         500:
           description: Unknown/ Internal Server error
   /showtime/movie:
@@ -309,10 +309,10 @@ paths:
                   $ref: '#/components/schemas/Showtime'
         404:
           description: Showtime not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
@@ -338,10 +338,10 @@ paths:
                   $ref: '#/components/schemas/Showtime'
         404:
           description: Showtime not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
@@ -360,10 +360,10 @@ paths:
           description: Ticket booked successfully
         400:
           description: Bad request
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role CUSTOMER
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role CUSTOMER
         500:
           description: Unknown/ Internal Server error
     get:
@@ -377,10 +377,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Booking'
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
@@ -406,10 +406,10 @@ paths:
                   $ref: '#/components/schemas/Booking'
         404:
           description: Showtime not found
-        403:
-          description: Forbidden, The jwt is invalid or expired
         401:
-          description: Unauthorized, can access only user with role ADMIN
+          description: Unauthorized, The jwt is invalid or expired, missing or invalid Authorization header
+        403:
+          description: Forbidden, can access only user with role ADMIN
         400:
           description: Bad request
         500:
