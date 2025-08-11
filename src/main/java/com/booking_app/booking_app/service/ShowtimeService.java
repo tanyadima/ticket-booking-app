@@ -75,7 +75,7 @@ public class ShowtimeService {
             boolean overlapWithDifferentShowtime = overlappingShowtimes.stream()
                     .anyMatch(showtime -> !showtime.getId().equals(showtimeId));
             if (overlapWithDifferentShowtime) {
-                throw new IllegalArgumentException("Overlapping showtimes exist for this theater.");
+                throw new IllegalArgumentException("Overlapping showtime exist for this theater.");
             }
         }
 

@@ -1,12 +1,13 @@
 package com.booking_app.booking_app.controller;
 
+import com.booking_app.booking_app.dto.ShowtimeRequest;
 import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.model.Showtime;
-import com.booking_app.booking_app.dto.ShowtimeRequest;
 import com.booking_app.booking_app.security.JwtUtil;
 import com.booking_app.booking_app.service.CustomUserDetailsService;
 import com.booking_app.booking_app.service.MovieService;
 import com.booking_app.booking_app.service.ShowtimeService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +46,9 @@ public class ShowtimeControllerTests {
     @MockBean
     private CustomUserDetailsService customUserDetailsService;
 
-    private Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
+    private String token;
+
+    private final Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
     private Showtime getShowtime1(){
         Showtime showtime1 = new Showtime();
         showtime1.setId(1L);
@@ -65,6 +68,12 @@ public class ShowtimeControllerTests {
         return showtime2;
     };
 
+    @BeforeEach
+    public void init() {
+        // Generate a new token before each test
+        token = jwtUtil.generateToken("admin", "ROLE_ADMIN");
+    }
+
     @Test
     public void testGetShowtimesByMovie() throws Exception {
         Showtime showtime1 = this.getShowtime1();
@@ -73,6 +82,7 @@ public class ShowtimeControllerTests {
 
         mockMvc.perform(get("/showtime/movie?movieTitle=Movie A")
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                 )
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
@@ -87,6 +97,7 @@ public class ShowtimeControllerTests {
 
         mockMvc.perform(get("/showtime/theater?theater=Theater A")
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                 )
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
@@ -103,6 +114,7 @@ public class ShowtimeControllerTests {
 
         mockMvc.perform(get("/showtime")
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                 )
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
@@ -116,6 +128,7 @@ public class ShowtimeControllerTests {
 
         mockMvc.perform(delete("/showtime/{id}", 1L)
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                         .with(csrf()))
                 .andExpect(status().isOk());
     }
@@ -130,6 +143,7 @@ public class ShowtimeControllerTests {
 
         mockMvc.perform(post("/showtime")
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                         .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{" +
@@ -150,6 +164,7 @@ public class ShowtimeControllerTests {
 
         mockMvc.perform(put("/showtime/{id}", 1L)
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").roles("ADMIN"))
+                        .header("Authorization", "Bearer " + token)
                         .with(csrf())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"movie\":\"Movie 1\", \"theater\":\"Theater A\", \"startTime\":\"2025-01-18T14:00:00\", \"endTime\":\"2025-01-18T16:00:00\"}"))

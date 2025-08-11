@@ -26,8 +26,8 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(AuthorizationDeniedException.class)
     public ResponseEntity<ErrorResponse> handleAuthorizationException(Exception ex) {
-        ErrorResponse errorResponse = new ErrorResponse("The user is not authorized to access this resource", HttpStatus.UNAUTHORIZED.value());
-        return new ResponseEntity<>(errorResponse, HttpStatus.UNAUTHORIZED);
+        ErrorResponse errorResponse = new ErrorResponse("The user is not authorized to access this resource", HttpStatus.FORBIDDEN.value());
+        return new ResponseEntity<>(errorResponse, HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(DataIntegrityViolationException.class)
@@ -64,5 +64,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleAuthenticatonException(InvalidCredentialsException ex) {
         ErrorResponse errorResponse = new ErrorResponse("Invalid Credentials", HttpStatus.UNAUTHORIZED.value());
         return new ResponseEntity<>(errorResponse, HttpStatus.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(DuplicateUserException.class)
+    public ResponseEntity<ErrorResponse> handleDuplicateUserException(DuplicateUserException ex) {
+        ErrorResponse errorResponse = new ErrorResponse(ex.getMessage(), HttpStatus.BAD_REQUEST.value());
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 }

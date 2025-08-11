@@ -7,7 +7,6 @@ import com.booking_app.booking_app.security.JwtUtil;
 import com.booking_app.booking_app.service.CustomUserDetailsService;
 import com.booking_app.booking_app.service.UserService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
