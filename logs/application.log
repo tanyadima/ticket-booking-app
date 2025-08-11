@@ -1,0 +1,1092 @@
+2025-03-13 14:15:29 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.RegisterControllerTests]: RegisterControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:15:29 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.RegisterControllerTests
+2025-03-13 14:15:29 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:15:29 - INFO - [main] - c.b.b.c.RegisterControllerTests - Starting RegisterControllerTests using Java 21.0.6 with PID 26970 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:15:29 - INFO - [main] - c.b.b.c.RegisterControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:15:29 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@834831b
+2025-03-13 14:15:30 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:15:30 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:15:30 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:15:30 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:15:30 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:15:30 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:15:30 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:15:30 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7210a38e-93be-4652-89bb-ed8f133c8970
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:15:31 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.RegisterControllerTests - Started RegisterControllerTests in 1.413 seconds (process running for 1.976)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@639948a2]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /register
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /register
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.RegistrationController#registerUser(UserRegistrationRequest)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserRegistrationRequest[name=name, password=pass, email=test@gmail.com, role=ADMIN]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [RegisterResponse[message=User registered successfully, username=name]]
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.MovieControllerTests]: MovieControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:15:31 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.MovieControllerTests
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.MovieControllerTests - Starting MovieControllerTests using Java 21.0.6 with PID 26970 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.MovieControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@796642ae
+2025-03-13 14:15:31 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 96a91ad5-f4a9-4cce-8f48-a2421bc9b207
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:15:31 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.MovieControllerTests - Started MovieControllerTests in 0.186 seconds (process running for 2.281)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4840ec68]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /movie/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured DELETE /movie/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#deleteMovie(Long)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /movie/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost/movie/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@62871522]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing PUT /movie/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured PUT /movie/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#updateMovie(Long, Movie)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.model.Movie@30e15628]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Movie@30e15628]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@10466c55]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /movie
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /movie
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#addMovie(Movie, UriComponentsBuilder)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.model.Movie@63d75087]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Movie@1f1e15de]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@31aa9b01]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /movie
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /movie
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#getAllMovies()
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Movie@4ed5492c, com.booking_app.booking_app.model.Movie@5ec06e97]]
+2025-03-13 14:15:31 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 1 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - INFO - [main] - o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.LoginController#login(LoginRequest)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json" to [LoginRequest[username=admin, password=password]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [JwtResponse[token=token, tokenType=Bearer]]
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.BookingControllerTests]: BookingControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:15:31 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.BookingControllerTests
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.BookingControllerTests - Starting BookingControllerTests using Java 21.0.6 with PID 26970 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.BookingControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@75559cd9
+2025-03-13 14:15:31 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 5 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 413e8af7-5510-4756-a108-6be5f576b3d9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:15:31 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.BookingControllerTests - Started BookingControllerTests in 0.166 seconds (process running for 2.573)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@60e5db1d]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /book
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#getAllBookings()
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Booking@3c7787a7]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost/book?continue to session
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@3bdc8975, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@3bdc8975, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@3bdc8975, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@3bdc8975, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@3f7bf0f6
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@1188e08b
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@46ae897c]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book/user/customer1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /book/user/customer1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#getBookingsByUserName(String)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Booking@160d68b8]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=customer, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@6b888692]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /book/ticket
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=customer, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /book/ticket
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#bookTicket(BookingRequest)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [BookingRequest[userName=customer1, showtimeId=1, movieTitle=film, seatNumber=5, price=12.5]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Booking@649a6d88]
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.ShowtimeControllerTests]: ShowtimeControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:15:31 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.ShowtimeControllerTests
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - Starting ShowtimeControllerTests using Java 21.0.6 with PID 26970 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@969c2f9
+2025-03-13 14:15:31 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:15:31 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:15:31 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7ab29511-aaf2-4379-ac44-c76c46cf7f2a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:15:31 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:15:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:15:31 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - Started ShowtimeControllerTests in 0.128 seconds (process running for 2.755)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@5bb24266]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /showtime
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /showtime
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#addShowtime(ShowtimeRequest)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.ShowtimeRequest@72b60be8]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Showtime@6f254d79]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /showtime/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost/showtime/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@1b72f9a]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime/theater?theater=Theater%20A
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime/theater?theater=Theater%20A
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getShowtimesByTheater(String)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@46ee9cfd]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@5d180628]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime/movie?movieTitle=Movie%20A
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime/movie?movieTitle=Movie%20A
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getShowtimesByMovie(String)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@7b4b559d, com.booking_app.booking_app.model.Showtime@104 (truncated)...]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@c9234a0]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing PUT /showtime/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured PUT /showtime/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#updateShowtime(Long, ShowtimeRequest)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.ShowtimeRequest@650e6569]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.dto.ShowtimeRequest@650e6569]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@2e640411]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getAllMovies()
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@5e609b42, com.booking_app.booking_app.model.Showtime@5fe (truncated)...]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@96271d8]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /showtime/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured DELETE /showtime/1
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#deleteShowtime(Long)
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:15:31 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-03-13 14:15:32 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.BookingAppApplicationTests]: BookingAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:15:32 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.BookingAppApplicationTests
+2025-03-13 14:15:32 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:15:32 - INFO - [main] - c.b.b.BookingAppApplicationTests - Starting BookingAppApplicationTests using Java 21.0.6 with PID 26970 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:15:32 - INFO - [main] - c.b.b.BookingAppApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:15:32 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@470c2a7a
+2025-03-13 14:15:32 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-13 14:15:32 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2025-03-13 14:15:32 - INFO - [main] - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-13 14:15:32 - INFO - [main] - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-03-13 14:15:32 - INFO - [main] - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-13 14:15:32 - INFO - [main] - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-13 14:15:32 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-13 14:15:33 - INFO - [main] - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f829755
+2025-03-13 14:15:33 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-13 14:15:33 - INFO - [main] - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.23
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-13 14:15:33 - INFO - [main] - o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.booking_app.booking_app.model.SeatAvailability (class must be instantiated by Interceptor)
+2025-03-13 14:15:33 - INFO - [main] - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-13 14:15:33 - INFO - [main] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:15:33 - INFO - [main] - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-13 14:15:34 - INFO - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-13 14:15:34 - WARN - [main] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-13 14:15:34 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 19 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:15:34 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:15:34 - INFO - [main] - o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2025-03-13 14:15:34 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:15:34 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:15:34 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:15:35 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:15:35 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:15:35 - INFO - [main] - o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-booking-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = booking-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-03-13 14:15:35 - INFO - [main] - o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-03-13 14:15:35 - INFO - [main] - o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.8.1
+2025-03-13 14:15:35 - INFO - [main] - o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 70d6ff42debf7e17
+2025-03-13 14:15:35 - INFO - [main] - o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1741868135331
+2025-03-13 14:15:35 - INFO - [main] - o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Subscribed to topic(s): booking-events
+2025-03-13 14:15:35 - INFO - [main] - c.b.b.BookingAppApplicationTests - Started BookingAppApplicationTests in 3.285 seconds (process running for 6.264)
+2025-03-13 14:15:35 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@834831b, started on Thu Mar 13 14:15:29 IST 2025
+2025-03-13 14:15:35 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@796642ae, started on Thu Mar 13 14:15:31 IST 2025
+2025-03-13 14:15:35 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@75559cd9, started on Thu Mar 13 14:15:31 IST 2025
+2025-03-13 14:15:35 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@969c2f9, started on Thu Mar 13 14:15:31 IST 2025
+2025-03-13 14:15:35 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@470c2a7a, started on Thu Mar 13 14:15:32 IST 2025
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Node -1 disconnected.
+2025-03-13 14:15:35 - WARN - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-03-13 14:15:35 - WARN - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Request joining group due to: consumer pro-actively leaving the group
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Unsubscribed all topics or patterns and assigned partitions
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-booking-group-1, groupId=booking-group] Request joining group due to: consumer pro-actively leaving the group
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-booking-group-1 unregistered
+2025-03-13 14:15:35 - INFO - [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] - o.s.k.l.KafkaMessageListenerContainer - booking-group: Consumer stopped
+2025-03-13 14:15:35 - INFO - [SpringApplicationShutdownHook] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:15:35 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-13 14:15:35 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-13 14:21:44 - INFO - [main] - c.b.b.BookingAppApplication - Starting BookingAppApplication using Java 21.0.6 with PID 27122 (/Users/dmitrys/projects/ticket-booking-app/target/classes started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:21:44 - INFO - [main] - c.b.b.BookingAppApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:21:44 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-13 14:21:44 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2025-03-13 14:21:45 - INFO - [main] - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-03-13 14:21:45 - INFO - [main] - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-03-13 14:21:45 - INFO - [main] - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-13 14:21:45 - INFO - [main] - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-13 14:21:45 - INFO - [main] - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-13 14:21:45 - INFO - [main] - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 996 ms
+2025-03-13 14:21:45 - INFO - [main] - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-13 14:21:45 - INFO - [main] - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-03-13 14:21:45 - INFO - [main] - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-13 14:21:45 - INFO - [main] - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-13 14:21:45 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-13 14:21:45 - INFO - [main] - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29fc83c5
+2025-03-13 14:21:45 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-13 14:21:45 - INFO - [main] - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.23
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-13 14:21:46 - INFO - [main] - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-13 14:21:46 - INFO - [main] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:21:46 - DEBUG - [main] - o.s.w.f.ServerHttpObservationFilter - Filter 'webMvcObservationFilter' configured for use
+2025-03-13 14:21:46 - INFO - [main] - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-13 14:21:47 - INFO - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-13 14:21:47 - WARN - [main] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-13 14:21:47 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 19 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:21:47 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:21:47 - INFO - [main] - o.s.b.a.e.web.EndpointLinksResolver - Exposing 15 endpoints beneath base path '/actuator'
+2025-03-13 14:21:47 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:21:47 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:21:47 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:21:47 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:21:47 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:21:47 - INFO - [main] - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-03-13 14:21:47 - INFO - [main] - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-03-13 14:21:47 - INFO - [main] - c.b.b.BookingAppApplication - Started BookingAppApplication in 3.735 seconds (process running for 4.048)
+2025-03-13 14:22:00 - INFO - [SpringApplicationShutdownHook] - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-13 14:22:00 - INFO - [tomcat-shutdown] - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-13 14:22:00 - INFO - [SpringApplicationShutdownHook] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:22:00 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-13 14:22:00 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-13 14:22:38 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.RegisterControllerTests]: RegisterControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:22:38 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.RegisterControllerTests
+2025-03-13 14:22:38 - INFO - [main] - c.b.b.c.RegisterControllerTests - Starting RegisterControllerTests using Java 21.0.6 with PID 27155 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:22:38 - INFO - [main] - c.b.b.c.RegisterControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:22:38 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@260f2144
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:22:39 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:22:39 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:22:39 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f4a3fa31-325c-47fe-86b1-97c9784d4313
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:22:39 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-13 14:22:39 - INFO - [main] - c.b.b.c.RegisterControllerTests - Started RegisterControllerTests in 1.278 seconds (process running for 1.796)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4be460e5]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /register
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /register
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.RegistrationController#registerUser(UserRegistrationRequest)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.UserRegistrationRequest@4cacccbf]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.dto.RegisterResponse@33568e26]
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.MovieControllerTests]: MovieControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:22:39 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.MovieControllerTests
+2025-03-13 14:22:39 - INFO - [main] - c.b.b.c.MovieControllerTests - Starting MovieControllerTests using Java 21.0.6 with PID 27155 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:22:39 - INFO - [main] - c.b.b.c.MovieControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@53b2e1eb
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:22:39 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:22:39 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:22:39 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d45fd91f-1b85-47e3-ad6c-a18e95764be7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:22:39 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:22:39 - INFO - [main] - c.b.b.c.MovieControllerTests - Started MovieControllerTests in 0.18 seconds (process running for 2.08)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@2c1a95a2]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /movie/1
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured DELETE /movie/1
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#deleteMovie(Long)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /movie/1
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost/movie/1
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@3d12f065]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing PUT /movie/1
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured PUT /movie/1
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#updateMovie(Long, Movie)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.model.Movie@3539cf45]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Movie@3539cf45]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@2979c6ef]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /movie
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /movie
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#addMovie(Movie, UriComponentsBuilder)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.model.Movie@1af6974c]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Movie@3516f436]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@2ec23ec3]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /movie
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /movie
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#getAllMovies()
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Movie@69e8b711, com.booking_app.booking_app.model.Movie@764a3867]]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 1 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:22:39 - INFO - [main] - o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.LoginController#login(LoginRequest)
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json" to [com.booking_app.booking_app.dto.LoginRequest@af96ac9]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.booking_app.booking_app.dto.JwtResponse@21948bd1]
+2025-03-13 14:22:39 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.BookingControllerTests]: BookingControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:22:39 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.BookingControllerTests
+2025-03-13 14:22:39 - INFO - [main] - c.b.b.c.BookingControllerTests - Starting BookingControllerTests using Java 21.0.6 with PID 27155 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:22:39 - INFO - [main] - c.b.b.c.BookingControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:22:39 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b1b2255
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 5 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:22:40 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:22:40 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:22:40 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 7481480e-9d49-4d06-9452-425e372ed5aa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:22:40 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:22:40 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:22:40 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:22:40 - INFO - [main] - c.b.b.c.BookingControllerTests - Started BookingControllerTests in 0.162 seconds (process running for 2.361)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@73633230]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /book
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#getAllBookings()
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Booking@470866d1]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost/book?continue to session
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@18cb4ed1, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@18cb4ed1, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@18cb4ed1, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@18cb4ed1, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@34376069
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@7be86438
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@13edc1bc]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book/user/customer1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /book/user/customer1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#getBookingsByUserName(String)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Booking@2d2fe68a]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=customer, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@70b0dc92]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /book/ticket
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=customer, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /book/ticket
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#bookTicket(BookingRequest)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.BookingRequest@619b7436]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Booking@6af0407c]
+2025-03-13 14:22:40 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.ShowtimeControllerTests]: ShowtimeControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:22:40 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.ShowtimeControllerTests
+2025-03-13 14:22:40 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - Starting ShowtimeControllerTests using Java 21.0.6 with PID 27155 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:22:40 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4e93d23e
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:22:40 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:22:40 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:22:40 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 042bf562-8b92-447c-80f5-55aa65a62d23
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:22:40 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:22:40 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:22:40 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:22:40 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - Started ShowtimeControllerTests in 0.116 seconds (process running for 2.525)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@7a285418]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /showtime
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /showtime
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#addShowtime(ShowtimeRequest)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.ShowtimeRequest@757ad227]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Showtime@4b718c45]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /showtime/1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost/showtime/1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@137db13f]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime/theater?theater=Theater%20A
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime/theater?theater=Theater%20A
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getShowtimesByTheater(String)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@2a9fd482]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@f4b2d13]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime/movie?movieTitle=Movie%20A
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime/movie?movieTitle=Movie%20A
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getShowtimesByMovie(String)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@7154a248, com.booking_app.booking_app.model.Showtime@435 (truncated)...]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@22f1a340]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing PUT /showtime/1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured PUT /showtime/1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#updateShowtime(Long, ShowtimeRequest)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.ShowtimeRequest@25291901]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.dto.ShowtimeRequest@25291901]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@f461c9c]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getAllMovies()
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@40477d52, com.booking_app.booking_app.model.Showtime@2a1 (truncated)...]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@36618b3b]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /showtime/1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured DELETE /showtime/1
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#deleteShowtime(Long)
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-03-13 14:22:40 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.BookingAppApplicationTests]: BookingAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:22:40 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.BookingAppApplicationTests
+2025-03-13 14:22:40 - INFO - [main] - c.b.b.BookingAppApplicationTests - Starting BookingAppApplicationTests using Java 21.0.6 with PID 27155 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:22:40 - INFO - [main] - c.b.b.BookingAppApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:22:40 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5d7f4cbb
+2025-03-13 14:22:40 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-13 14:22:40 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2025-03-13 14:22:40 - INFO - [main] - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-13 14:22:41 - INFO - [main] - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-03-13 14:22:41 - INFO - [main] - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-13 14:22:41 - INFO - [main] - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-13 14:22:41 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-13 14:22:41 - INFO - [main] - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16209621
+2025-03-13 14:22:41 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-13 14:22:41 - INFO - [main] - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.23
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-13 14:22:41 - INFO - [main] - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-13 14:22:41 - INFO - [main] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:22:41 - INFO - [main] - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-13 14:22:42 - INFO - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-13 14:22:42 - WARN - [main] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-13 14:22:42 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 19 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:22:42 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:22:42 - INFO - [main] - o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2025-03-13 14:22:42 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:22:42 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:22:42 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:22:42 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:22:43 - INFO - [main] - c.b.b.BookingAppApplicationTests - Started BookingAppApplicationTests in 2.591 seconds (process running for 5.341)
+2025-03-13 14:22:43 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@260f2144, started on Thu Mar 13 14:22:38 IST 2025
+2025-03-13 14:22:43 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@53b2e1eb, started on Thu Mar 13 14:22:39 IST 2025
+2025-03-13 14:22:43 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@4b1b2255, started on Thu Mar 13 14:22:39 IST 2025
+2025-03-13 14:22:43 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@4e93d23e, started on Thu Mar 13 14:22:40 IST 2025
+2025-03-13 14:22:43 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@5d7f4cbb, started on Thu Mar 13 14:22:40 IST 2025
+2025-03-13 14:22:43 - INFO - [SpringApplicationShutdownHook] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:22:43 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-13 14:22:43 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-13 14:23:24 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.BookingControllerTests]: BookingControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:23:24 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.BookingControllerTests
+2025-03-13 14:23:24 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:23:24 - INFO - [main] - c.b.b.c.BookingControllerTests - Starting BookingControllerTests using Java 21.0.6 with PID 27185 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:23:24 - INFO - [main] - c.b.b.c.BookingControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:23:24 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@74ad8d05
+2025-03-13 14:23:25 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 5 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:23:25 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:23:25 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:23:25 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5eb693a7-21d8-4143-b890-4d09093fa309
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:23:25 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:23:25 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:23:25 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:23:25 - INFO - [main] - c.b.b.c.BookingControllerTests - Started BookingControllerTests in 1.332 seconds (process running for 1.907)
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@270f7b4d]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /book
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#getAllBookings()
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Booking@71df5f30]]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.s.HttpSessionRequestCache - Saved request http://localhost/book?continue to session
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using And [Not [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@63187d63, matchingMediaTypes=[application/xhtml+xml, image/*, text/html, text/plain], useEquals=false, ignoredMediaTypes=[*/*]]]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using Or [RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest], And [Not [MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@63187d63, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@63187d63, matchingMediaTypes=[application/atom+xml, application/x-www-form-urlencoded, application/json, application/octet-stream, application/xml, multipart/form-data, text/xml], useEquals=false, ignoredMediaTypes=[*/*]]], MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@63187d63, matchingMediaTypes=[*/*], useEquals=true, ignoredMediaTypes=[]]]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Match found! Executing org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint@61d011e
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.a.DelegatingAuthenticationEntryPoint - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@81dfdee
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@56fa0ef]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /book/user/customer1
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=amin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /book/user/customer1
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#getBookingsByUserName(String)
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Booking@21ab919c]]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=customer, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@54f9326c]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /book/ticket
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=customer, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /book/ticket
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.BookingController#bookTicket(BookingRequest)
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.BookingRequest@46b2a11a]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:25 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Booking@541897c6]
+2025-03-13 14:23:25 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@74ad8d05, started on Thu Mar 13 14:23:24 IST 2025
+2025-03-13 14:23:31 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:23:31 - INFO - [main] - o.s.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:23:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:23:31 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-13 14:23:35 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.MovieControllerTests]: MovieControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:23:35 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.MovieControllerTests
+2025-03-13 14:23:35 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:23:35 - INFO - [main] - c.b.b.c.MovieControllerTests - Starting MovieControllerTests using Java 21.0.6 with PID 27204 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:23:35 - INFO - [main] - c.b.b.c.MovieControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:23:35 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65bcf7c2
+2025-03-13 14:23:36 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:23:36 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:23:36 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:23:36 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: eb361974-461f-4bd0-b741-d0baba31644c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:23:36 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:23:36 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:23:36 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-13 14:23:36 - INFO - [main] - c.b.b.c.MovieControllerTests - Started MovieControllerTests in 1.284 seconds (process running for 1.833)
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@3278d065]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /movie/1
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured DELETE /movie/1
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#deleteMovie(Long)
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /movie/1
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost/movie/1
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@1f293cb7]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing PUT /movie/1
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured PUT /movie/1
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#updateMovie(Long, Movie)
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.model.Movie@30a791a6]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Movie@30a791a6]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@8afce3]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /movie
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /movie
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#addMovie(Movie, UriComponentsBuilder)
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.model.Movie@323c6f9c]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Movie@f9de1fd]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@699bb304]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /movie
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /movie
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.MovieController#getAllMovies()
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:36 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Movie@4a3bf37c, com.booking_app.booking_app.model.Movie@48aaaed9]]
+2025-03-13 14:23:36 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@65bcf7c2, started on Thu Mar 13 14:23:35 IST 2025
+2025-03-13 14:23:43 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.RegisterControllerTests]: RegisterControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:23:43 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.RegisterControllerTests
+2025-03-13 14:23:44 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:23:44 - INFO - [main] - c.b.b.c.RegisterControllerTests - Starting RegisterControllerTests using Java 21.0.6 with PID 27213 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:23:44 - INFO - [main] - c.b.b.c.RegisterControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:23:44 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@55ecbafe
+2025-03-13 14:23:45 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:23:45 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:23:45 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:23:45 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 354adf51-40b6-48c0-ab5d-7cc386d30976
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:23:45 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:23:45 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:23:45 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-13 14:23:45 - INFO - [main] - c.b.b.c.RegisterControllerTests - Started RegisterControllerTests in 1.326 seconds (process running for 1.874)
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@40b70f31]
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /register
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /register
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.RegistrationController#registerUser(UserRegistrationRequest)
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.UserRegistrationRequest@46a97805]
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:45 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.dto.RegisterResponse@53c40ed6]
+2025-03-13 14:23:45 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@55ecbafe, started on Thu Mar 13 14:23:44 IST 2025
+2025-03-13 14:23:49 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.controller.ShowtimeControllerTests]: ShowtimeControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:23:49 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.controller.ShowtimeControllerTests
+2025-03-13 14:23:50 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:23:50 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - Starting ShowtimeControllerTests using Java 21.0.6 with PID 27222 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:23:50 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:23:50 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@65bcf7c2
+2025-03-13 14:23:50 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:23:50 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 8 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:23:51 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:23:51 - WARN - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [inMemoryUserDetailsManager, com.booking_app.booking_app.service.CustomUserDetailsService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:23:51 - WARN - [main] - o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: ae0bad5e-78a6-4080-9778-6f7ceb8eafa5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-03-13 14:23:51 - INFO - [main] - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-13 14:23:51 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-13 14:23:51 - INFO - [main] - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-13 14:23:51 - INFO - [main] - c.b.b.c.ShowtimeControllerTests - Started ShowtimeControllerTests in 1.322 seconds (process running for 1.887)
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@4d0abb23]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing POST /showtime
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured POST /showtime
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#addShowtime(ShowtimeRequest)
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.ShowtimeRequest@b3042ed]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.model.Showtime@5614ae05]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /showtime/1
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.csrf.CsrfFilter - Invalid CSRF token found for http://localhost/showtime/1
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.a.AccessDeniedHandlerImpl - Responding with 403 status code
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@29394966]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime/theater?theater=Theater%20A
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime/theater?theater=Theater%20A
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getShowtimesByTheater(String)
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@6a5c2d2d]]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@61c145cb]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime/movie?movieTitle=Movie%20A
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime/movie?movieTitle=Movie%20A
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getShowtimesByMovie(String)
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@153409b8, com.booking_app.booking_app.model.Showtime@511 (truncated)...]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@391e5ffa]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing PUT /showtime/1
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured PUT /showtime/1
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#updateShowtime(Long, ShowtimeRequest)
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.booking_app.booking_app.dto.ShowtimeRequest@4205d5d0]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.booking_app.booking_app.dto.ShowtimeRequest@4205d5d0]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@441016d6]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing GET /showtime
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured GET /showtime
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#getAllMovies()
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.booking_app.booking_app.model.Showtime@400e741, com.booking_app.booking_app.model.Showtime@3be3 (truncated)...]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Created HttpSession as SecurityContext is non-default
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.springframework.mock.web.MockHttpSession@8bde368]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Securing DELETE /showtime/1
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.security.web.FilterChainProxy - Secured DELETE /showtime/1
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.booking_app.booking_app.controller.ShowtimeController#deleteShowtime(Long)
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-03-13 14:23:51 - DEBUG - [main] - o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-03-13 14:23:51 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@65bcf7c2, started on Thu Mar 13 14:23:50 IST 2025
+2025-03-13 14:24:22 - INFO - [main] - o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.booking_app.booking_app.BookingAppApplicationTests]: BookingAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-13 14:24:22 - INFO - [main] - o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.booking_app.booking_app.BookingAppApplication for test class com.booking_app.booking_app.BookingAppApplicationTests
+2025-03-13 14:24:23 - WARN - [main] - o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/dmitrys/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/dmitrys/.m2/repository/org/json/json/20210307/json-20210307.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2025-03-13 14:24:23 - INFO - [main] - c.b.b.BookingAppApplicationTests - Starting BookingAppApplicationTests using Java 21.0.6 with PID 27255 (started by dmitrys in /Users/dmitrys/projects/ticket-booking-app)
+2025-03-13 14:24:23 - INFO - [main] - c.b.b.BookingAppApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:24:23 - DEBUG - [main] - o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@8a62297
+2025-03-13 14:24:23 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-13 14:24:23 - INFO - [main] - o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2025-03-13 14:24:23 - INFO - [main] - o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-13 14:24:23 - INFO - [main] - org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-03-13 14:24:23 - INFO - [main] - o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-03-13 14:24:24 - INFO - [main] - o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-13 14:24:24 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-13 14:24:24 - INFO - [main] - com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2336d3f
+2025-03-13 14:24:24 - INFO - [main] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-13 14:24:24 - INFO - [main] - o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.23
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-13 14:24:24 - INFO - [main] - o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-13 14:24:24 - INFO - [main] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:24:25 - INFO - [main] - o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-13 14:24:25 - INFO - [main] - o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-13 14:24:25 - WARN - [main] - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-13 14:24:25 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerMapping - 19 mappings in 'requestMappingHandlerMapping'
+2025-03-13 14:24:25 - DEBUG - [main] - o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-03-13 14:24:26 - INFO - [main] - o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2025-03-13 14:24:26 - DEBUG - [main] - o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-13 14:24:26 - INFO - [main] - o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-13 14:24:26 - DEBUG - [main] - o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-13 14:24:26 - WARN - [main] - o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-03-13 14:24:26 - DEBUG - [main] - o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-13 14:24:26 - INFO - [main] - c.b.b.BookingAppApplicationTests - Started BookingAppApplicationTests in 3.589 seconds (process running for 4.127)
+2025-03-13 14:24:26 - DEBUG - [SpringApplicationShutdownHook] - o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@8a62297, started on Thu Mar 13 14:24:23 IST 2025
+2025-03-13 14:24:26 - INFO - [SpringApplicationShutdownHook] - o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-13 14:24:26 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-13 14:24:26 - INFO - [SpringApplicationShutdownHook] - com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
