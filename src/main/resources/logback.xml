@@ -1,0 +1,20 @@
+<configuration>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/application.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %level - [%thread] - %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.booking_app.booking_app" level="DEBUG"/>
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

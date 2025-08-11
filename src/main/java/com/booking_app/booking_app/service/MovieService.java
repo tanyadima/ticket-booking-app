@@ -29,7 +29,7 @@ public class MovieService {
         Movie existingMovie = movieRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Movie not found"));
         if(!existingMovie.getTitle().equals(updatedMovie.getTitle())){
-            throw new IllegalArgumentException("Movie title must be unigue");
+            throw new IllegalArgumentException("Movie title must be unique");
         }
         existingMovie.setTitle(updatedMovie.getTitle());
         existingMovie.setGenre(updatedMovie.getGenre());

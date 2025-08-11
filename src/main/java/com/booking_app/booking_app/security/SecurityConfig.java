@@ -29,6 +29,7 @@ public class SecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests()
+                .requestMatchers("/actuator/**").permitAll()
                 .requestMatchers("/login", "/register").permitAll()
                 .requestMatchers("/movies", "/showtimes").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.POST, "/book").hasRole("CUSTOMER")

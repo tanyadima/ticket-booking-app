@@ -40,7 +40,7 @@ public class ShowtimeService {
         }
 
         if (!overlappingShowtimes.isEmpty()) {
-            throw new IllegalArgumentException("Overlapping showtimes exist for this theater.");
+            throw new IllegalArgumentException("Overlapping showtime exist for this theater.");
         }
 
         return showtimeRepository.save(showtime);
