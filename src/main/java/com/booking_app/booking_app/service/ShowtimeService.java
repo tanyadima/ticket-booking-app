@@ -35,6 +35,10 @@ public class ShowtimeService {
                 showtime.getEndTime()
         );
 
+        if (!showtimeRequest.getStartTime().isBefore(showtimeRequest.getEndTime())) {
+            throw new IllegalArgumentException("Start time must be before end time");
+        }
+
         if (!overlappingShowtimes.isEmpty()) {
             throw new IllegalArgumentException("Overlapping showtimes exist for this theater.");
         }
