@@ -1,5 +1,6 @@
 package com.booking_app.booking_app.controller;
 
+import com.booking_app.booking_app.dto.ShowtimeDto;
 import com.booking_app.booking_app.exceptions.ShowtimeNotFoundException;
 import com.booking_app.booking_app.model.Showtime;
 import com.booking_app.booking_app.dto.ShowtimeRequest;
@@ -21,9 +22,10 @@ public class ShowtimeController {
     private ShowtimeService showtimeService;
 
     @PostMapping
-    public ResponseEntity<Showtime> addShowtime(@RequestBody ShowtimeRequest showtimeRequest) {
+    public ResponseEntity<ShowtimeDto> addShowtime(@RequestBody ShowtimeRequest showtimeRequest) {
         Showtime createdShowtime = showtimeService.addShowtime(showtimeRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdShowtime);
+        ShowtimeDto showtimeDto = new ShowtimeDto(createdShowtime.getId(), createdShowtime.getStartTime(), createdShowtime.getEndTime(), createdShowtime.getMovie().getTitle(), createdShowtime.getTheater());
+        return ResponseEntity.status(HttpStatus.CREATED).body(showtimeDto);
     }
 
     @PutMapping("/{id}")
@@ -35,24 +37,52 @@ public class ShowtimeController {
     }
 
     @GetMapping
-    public List<Showtime> getAllMovies() {
-        return showtimeService.getAllShowtimes();
+    public List<ShowtimeDto> getAllMovies() {
+        List<Showtime> showtimes = showtimeService.getAllShowtimes();
+        List<ShowtimeDto> showtimeDtos = showtimes.stream()
+                .map(showtime -> new ShowtimeDto(
+                        showtime.getId(),
+                        showtime.getStartTime(),
+                        showtime.getEndTime(),
+                        showtime.getMovie().getTitle(),
+                        showtime.getTheater()
+                ))
+                .toList();
+        return showtimeDtos;
     }
 
     @GetMapping("/theater")
-    public ResponseEntity<List<Showtime>> getShowtimesByTheater(@RequestParam("theater") String theater) {
+    public ResponseEntity<List<ShowtimeDto>> getShowtimesByTheater(@RequestParam("theater") String theater) {
         List<Showtime> showtimes = showtimeService.getShowtimesByTheater(theater);
         if(!showtimes.isEmpty()){
-            return ResponseEntity.ok(showtimes);
+            List<ShowtimeDto> showtimeDtos = showtimes.stream()
+                    .map(showtime -> new ShowtimeDto(
+                            showtime.getId(),
+                            showtime.getStartTime(),
+                            showtime.getEndTime(),
+                            showtime.getMovie().getTitle(),
+                            showtime.getTheater()
+                    ))
+                    .toList();
+            return ResponseEntity.ok(showtimeDtos);
         }
         throw new ShowtimeNotFoundException("Showtime not found");
     }
 
     @GetMapping("/movie")
-    public ResponseEntity<List<Showtime>> getShowtimesByMovie(@RequestParam("movieTitle") String movieTitle) {
+    public ResponseEntity<List<ShowtimeDto>> getShowtimesByMovie(@RequestParam("movieTitle") String movieTitle) {
         List<Showtime> showtimes = showtimeService.getShowtimesByMovie(movieTitle);
         if(!showtimes.isEmpty()){
-            return ResponseEntity.ok(showtimes);
+            List<ShowtimeDto> showtimeDtos = showtimes.stream()
+                    .map(showtime -> new ShowtimeDto(
+                            showtime.getId(),
+                            showtime.getStartTime(),
+                            showtime.getEndTime(),
+                            showtime.getMovie().getTitle(),
+                            showtime.getTheater()
+                    ))
+                    .toList();
+            return ResponseEntity.ok(showtimeDtos);
         }
         throw new ShowtimeNotFoundException("Showtime not found");
     }
