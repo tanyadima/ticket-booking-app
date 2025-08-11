@@ -57,7 +57,7 @@ public class RegisterControllerTests {
                                 "\"password\": \"pass\"," +
                                 "\"email\": \"test@gmail.com\"," +
                                 "\"role\": \"ADMIN\"}"))
-                .andExpect(status().isOk());
+                .andExpect(status().isCreated());
     }
 }
 
