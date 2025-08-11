@@ -52,7 +52,7 @@ public class BookingControllerTests {
     @MockBean
     private CustomUserDetailsService customUserDetailsService;
 
-    private Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
+    private final Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
     private Showtime getShowtime1(){
         Showtime showtime1 = new Showtime();
         showtime1.setId(1L);

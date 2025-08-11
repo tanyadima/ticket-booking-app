@@ -25,7 +25,7 @@ class UserServiceTests {
     private UserService userService;
 
     @Test
-    void testAddMovie() {
+    void testAddUser() {
         User user = new User();
         user.setId(1L);
         user.setEmail("test@email.com");
