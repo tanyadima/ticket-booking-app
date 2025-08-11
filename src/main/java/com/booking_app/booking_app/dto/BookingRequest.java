@@ -2,13 +2,7 @@ package com.booking_app.booking_app.dto;
 
 import java.math.BigDecimal;
 
-public class BookingRequest {
-    private String userName;
-    private Long showtimeId;
-    private String movieTitle;
-    private Integer seatNumber;
-    private BigDecimal price;
-
+public record BookingRequest(String userName, Long showtimeId, String movieTitle, Integer seatNumber, BigDecimal price ) {
     public String getUserName() {
         return userName;
     }
@@ -29,3 +23,4 @@ public class BookingRequest {
         return price;
     }
 }
+
