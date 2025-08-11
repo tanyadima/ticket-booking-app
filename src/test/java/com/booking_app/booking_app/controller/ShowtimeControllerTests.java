@@ -2,7 +2,9 @@ package com.booking_app.booking_app.controller;
 
 import com.booking_app.booking_app.model.Movie;
 import com.booking_app.booking_app.model.Showtime;
-import com.booking_app.booking_app.requests.ShowtimeRequest;
+import com.booking_app.booking_app.dto.ShowtimeRequest;
+import com.booking_app.booking_app.security.JwtUtil;
+import com.booking_app.booking_app.service.CustomUserDetailsService;
 import com.booking_app.booking_app.service.MovieService;
 import com.booking_app.booking_app.service.ShowtimeService;
 import org.junit.jupiter.api.Test;
@@ -36,6 +38,12 @@ public class ShowtimeControllerTests {
 
     @MockBean
     private ShowtimeService showtimeService;
+
+    @MockBean
+    private JwtUtil jwtUtil;
+
+    @MockBean
+    private CustomUserDetailsService customUserDetailsService;
 
     private Movie movie = new Movie(1L, "Movie A", "Action", 120, 8.5, 2023);
     private Showtime getShowtime1(){

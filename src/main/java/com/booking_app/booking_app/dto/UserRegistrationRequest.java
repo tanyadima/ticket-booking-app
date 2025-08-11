@@ -1,4 +1,4 @@
-package com.booking_app.booking_app.requests;
+package com.booking_app.booking_app.dto;
 
 import com.booking_app.booking_app.enums.Role;
 
