@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+</head>
+<body>
+<h1>Welcome to the Movie Ticket Booking System</h1>
+
+<br>
+<br>
+<br>
+<!-- Element to display the cookie -->
+<p>Your session cookie value is: <span th:text="${cookieValue}"></span></p>
+<br>
+<br>
+<br>
+<!-- Logout link -->
+<a th:href="@{/logout}">Logout</a>
+
+
+<!-- Logout success message -->
+<div th:if="${param.logout}" style="color: green; margin-top: 20px;">
+  <p>You have been logged out successfully.</p>
+</div>
+</body>
+</html>
