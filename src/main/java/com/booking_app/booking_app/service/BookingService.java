@@ -59,7 +59,7 @@ public class BookingService {
 
         // Check if the seat is already booked
         if (bookingRepository.existsByShowtimeAndSeatNumber(showtime, seatNumber)) {
-            logger.error("Seat {} is already booked for this showtime", seatNumber);
+            logger.error("Seat [{}] is already booked for this showtime", seatNumber);
             throw new DataIntegrityViolationException("Seat " + seatNumber + " is already booked for this showtime");
         }
 
@@ -78,7 +78,7 @@ public class BookingService {
         Booking savedBooking = bookingRepository.save(booking);
         // Increment custom metric
         bookingCounter.increment();
-        logger.info("Booking to movie {}, showtime {} and seatNumber {} was successful", title, showtimeId, seatNumber);
+        logger.info("Booking to movie [{}], showtime [{}] and seatNumber [{}] was successful", title, showtimeId, seatNumber);
         return savedBooking;
     }
 
