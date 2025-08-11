@@ -1,6 +1,8 @@
 package com.booking_app.booking_app.controller;
 
 import com.booking_app.booking_app.model.Movie;
+import com.booking_app.booking_app.security.JwtUtil;
+import com.booking_app.booking_app.service.CustomUserDetailsService;
 import com.booking_app.booking_app.service.MovieService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -29,6 +31,12 @@ public class MovieControllerTests {
 
     @MockBean
     private MovieService movieService;
+
+    @MockBean
+    private JwtUtil jwtUtil;
+
+    @MockBean
+    private CustomUserDetailsService customUserDetailsService;
 
 
     @Test

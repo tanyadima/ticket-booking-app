@@ -1,6 +1,6 @@
 package com.booking_app.booking_app.controller;
 
-import com.booking_app.booking_app.requests.UserRegistrationRequest;
+import com.booking_app.booking_app.dto.UserRegistrationRequest;
 import com.booking_app.booking_app.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

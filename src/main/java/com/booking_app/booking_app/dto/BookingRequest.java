@@ -1,7 +1,6 @@
-package com.booking_app.booking_app.requests;
+package com.booking_app.booking_app.dto;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class BookingRequest {
     private String userName;
