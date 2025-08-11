@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -33,6 +34,7 @@ public class BookingService {
     @Value("${showtime.max-seats}")
     private int maxSeatsPerShowtime;
 
+    @Transactional
     public Booking bookTicket(String userName, Long showtimeId, String title, Integer seatNumber, BigDecimal price) {
         User user = userRepository.findByName(userName)
                 .orElseThrow(() -> new DataIntegrityViolationException("User not found"));

@@ -2,12 +2,8 @@ package com.booking_app.booking_app.dto;
 
 import com.booking_app.booking_app.enums.Role;
 
-public class UserRegistrationRequest {
-    private String name;
-    private String password;
-    private String email;
-    private String role;
 
+public record UserRegistrationRequest(String name, String password, String  email, String role) {
     public String getName() {
         return name;
     }
@@ -24,3 +20,4 @@ public class UserRegistrationRequest {
         return Role.valueOf(role);
     }
 }
+
